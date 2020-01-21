@@ -1,4 +1,4 @@
-package com.example.checkerapp.ui
+package com.example.checkerapp.ui.main
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class Employee (
 
     @SerializedName("employeeId")
-    val employeeId: Long,
+    val employeeId: String,
 
     @SerializedName("firstName")
     val firstName: String,
@@ -14,7 +14,7 @@ data class Employee (
     val lastName: String,
 
     @SerializedName("passId")
-    val passId: Long,
+    val passId: String,
 
     @SerializedName("password")
     val password: String
