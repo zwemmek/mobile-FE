@@ -37,6 +37,7 @@ class HistoryAdapter(private val statuses: List<StatusHistory>)
             itemView.tvLastCheckedInDate.text = context.getString(R.string.last_checked_in_date,
                 history.lastCheckedInDate)
             if(history.lastCheckedOutDate != null)
+                //TODO deze statement oplossen.
             itemView.tvLastCheckedOutDate.text = context.getString(R.string.last_checked_out_date,
                 history.lastCheckedOutDate)
             else

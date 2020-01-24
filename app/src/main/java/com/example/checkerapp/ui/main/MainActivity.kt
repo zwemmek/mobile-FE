@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
 
         mainViewModel.employee.observe(this, Observer { employee ->
             if (employee != null) {
-                tvEmployeeId.text = employee.employeeId.toString()
+                tvEmployeeId.text = employee.employeeId
                 tvFirstName.text = employee.firstName
                 tvLastName.text = employee.lastName
-                tvPassId.text = employee.passId.toString()
+                tvPassId.text = employee.passId
             }
         })
 

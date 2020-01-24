@@ -1,9 +1,29 @@
 <resources>
+    <!--    used in: layout\activity_change_status.xml-->
     <string name="app_name">CheckerApp</string>
+    <string name="current_state">Current State</string>
+    <string name="checked_in_out_ph">Checked in/out PH</string>
+    <string name="checkbox_placeholder">Checkbox Placeholder</string>
+    <string name="reason_field_optional">Reason field (optional)</string>
+    <string name="check_me_in_out">Check me in/out</string>
+
+    <!--    used in: layout\activity_register.xml-->
+    <string name="placeholder_image">Placeholder Image</string>
+    <string name="register_an_account">Register an account</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="employee_id">Employee ID</string>
+    <string name="pass_id">Pass ID</string>
+    <string name="password">password</string>
+    <string name="repeat_password">repeat password</string>
+    <string name="confirm">Confirm</string>
+
+    <!--    used in: layout\activity_history.xml-->
     <string name="status"><b>Status:</b> %1$s</string>
     <string name="last_checked_in_date"><b>Last checked in date: </b> %1$s</string>
     <string name="last_checked_out_date"><b>Last checked out date: </b>%1$s</string>
     <string name="current_status_button">Status</string>
     <string name="change_status_button">Change</string>
     <string name="status_history_button">History</string>
+
 </resources>

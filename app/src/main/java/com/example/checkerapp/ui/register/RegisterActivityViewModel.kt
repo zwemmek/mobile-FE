@@ -1,4 +1,4 @@
-package com.example.checkerapp.ui.main
+package com.example.checkerapp.ui.register
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -11,27 +11,28 @@ import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Callback
 
-class MainActivityViewModel(application: Application) : AndroidViewModel(application) {
+class RegisterActivityViewModel(application: Application) : AndroidViewModel(application) {
 
     private val employeeApiRepository = EmployeeApiRepository()
-    val employee = MutableLiveData<Employee>()
+    var authResponse:Boolean = false
     val error = MutableLiveData<String>()
+    val serverResponse = MutableLiveData<String>()
 
-    fun getEmployeeByPassId(passId: Long) {
-        employeeApiRepository.getEmployeeByPassId(passId).enqueue(object : Callback<Employee> {
-            override fun onResponse(call : Call<Employee>, response: Response<Employee>) {
-                if (response.isSuccessful) employee.value = response.body()!!
+    fun registerEmployee(employee: Employee) {
+        employeeApiRepository.registerEmployee(employee).enqueue(object : Callback<ServerResponse> {
+
+           override fun onFailure(call: Call<ServerResponse>, t: Throwable) {
+                error.value = t.message
+            }
+
+            override fun onResponse(call : Call<ServerResponse>, response: Response<ServerResponse>) {
+                if (response.isSuccessful) authResponse = true
                 else {
                     val serverResponse = Gson().fromJson(response.errorBody()!!.string()
                         , ServerResponse::class.java)
                     error.value = serverResponse.message
                 }
             }
-
-            override fun onFailure(call: Call<Employee>, t: Throwable) {
-                error.value = t.message
-            }
-
         })
     }
 }

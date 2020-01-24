@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.checkerapp.model.ServerResponse
 import com.example.checkerapp.model.StatusHistory
-import com.example.checkerapp.repository.ApiRepository
+import com.example.checkerapp.repository.EmployeeApiRepository
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback
@@ -13,7 +13,7 @@ import retrofit2.Response
 
 class HistoryActivityViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val apiRepository = ApiRepository()
+    private val apiRepository = EmployeeApiRepository()
     val history = MutableLiveData<List<StatusHistory>>()
     val error = MutableLiveData<String>()
 
