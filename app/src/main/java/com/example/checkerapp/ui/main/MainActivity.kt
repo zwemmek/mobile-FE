@@ -1,4 +1,4 @@
-package com.example.checkerapp.ui
+package com.example.checkerapp.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

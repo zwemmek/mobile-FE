@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CheckerApp</string>
+    <string name="status"><b>Status:</b> %1$s</string>
+    <string name="last_checked_in_date"><b>Last checked in date: </b> %1$s</string>
+    <string name="last_checked_out_date"><b>Last checked out date: </b>%1$s</string>
+    <string name="current_status_button">Status</string>
+    <string name="change_status_button">Change</string>
+    <string name="status_history_button">History</string>
 </resources>
