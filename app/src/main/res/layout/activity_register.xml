@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:contentDescription="Placeholder Image"
+        android:contentDescription="@string/placeholder_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +22,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register an account"
+        android:text="@string/register_an_account"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         android:textStyle="normal|bold"
@@ -45,7 +45,7 @@
             android:id="@+id/etFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="first name"
+            android:hint="@string/first_name"
             android:inputType="text"
             android:maxLines="1" />
 
@@ -64,7 +64,7 @@
             android:id="@+id/etLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="last name"
+            android:hint="@string/last_name"
             android:inputType="text"
             android:maxLines="1" />
 
@@ -83,7 +83,7 @@
             android:id="@+id/etEmployeeID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Employee ID"
+            android:hint="@string/employee_id"
             android:inputType="text"
             android:maxLines="1" />
 
@@ -102,7 +102,7 @@
             android:id="@+id/etPassID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Pass ID"
+            android:hint="@string/pass_id"
             android:inputType="text"
             android:maxLines="1" />
 
@@ -121,7 +121,7 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:maxLines="1" />
 
@@ -141,7 +141,7 @@
             android:id="@+id/etRepeatPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="repeat password"
+            android:hint="@string/repeat_password"
             android:inputType="textPassword"
             android:maxLines="1" />
 
@@ -152,7 +152,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="Confirm"
+        android:text="@string/confirm"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
