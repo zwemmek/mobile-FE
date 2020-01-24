@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.example.checkerapp.model.Employee
 import com.example.checkerapp.model.ServerResponse
 import com.example.checkerapp.repository.EmployeeApiRepository
+import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Callback
@@ -15,7 +16,7 @@ class RegisterActivityViewModel(application: Application) : AndroidViewModel(app
     private val employeeApiRepository = EmployeeApiRepository()
     var authResponse:Boolean = false
     val error = MutableLiveData<String>()
-    val serverResponse = MutableLiveData<ServerResponse>()
+    val serverResponse = MutableLiveData<String>()
 
     fun registerEmployee(employee: Employee) {
         employeeApiRepository.registerEmployee(employee).enqueue(object : Callback<ServerResponse> {
@@ -26,9 +27,11 @@ class RegisterActivityViewModel(application: Application) : AndroidViewModel(app
 
             override fun onResponse(call : Call<ServerResponse>, response: Response<ServerResponse>) {
                 if (response.isSuccessful) authResponse = true
-                else
-                    error.value =  response.errorBody().toString()
-                    authResponse = false
+                else {
+                    val serverResponse = Gson().fromJson(response.errorBody()!!.string()
+                        , ServerResponse::class.java)
+                    error.value = serverResponse.message
+                }
             }
         })
     }
