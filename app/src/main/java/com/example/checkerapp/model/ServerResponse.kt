@@ -6,4 +6,5 @@ data class ServerResponse (
 
     @SerializedName("message")
     val message: String
+
 )
