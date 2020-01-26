@@ -1,10 +1,10 @@
 <resources>
     <!--    used in: layout\activity_change_status.xml-->
     <string name="app_name">CheckerApp</string>
-    <string name="current_state">Current State</string>
+    <string name="current_state">Current in/out status</string>
     <string name="checked_in_out_ph">Checked in/out PH</string>
     <string name="checkbox_placeholder">Checkbox Placeholder</string>
-    <string name="reason_field_optional">Reason (optional)</string>
+    <string name="reason_field_optional">type reason here (optional)</string>
     <string name="check_me_in">Check me in</string>
     <string name="check_me_out">Check me out</string>
     <string name="checked_status">You are checked: %1$s</string>
