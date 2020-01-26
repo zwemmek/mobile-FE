@@ -16,7 +16,6 @@ import android.widget.ProgressBar
 import android.widget.Toast
 
 import com.example.checkerapp.R
-import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -41,8 +40,8 @@ class LoginActivity : AppCompatActivity() {
             // disable login button unless both username / password is valid
             login.isEnabled = loginState.isDataValid
 
-            if (loginState.usernameError != null) {
-                username.error = getString(loginState.usernameError)
+            if (loginState.passIdError != null) {
+                username.error = getString(loginState.passIdError)
             }
             if (loginState.passwordError != null) {
                 password.error = getString(loginState.passwordError)

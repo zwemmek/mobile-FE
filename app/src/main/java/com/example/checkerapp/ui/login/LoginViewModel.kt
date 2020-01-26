@@ -17,21 +17,21 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
     private val _loginResult = MutableLiveData<LoginResult>()
     val loginResult: LiveData<LoginResult> = _loginResult
 
-    fun login(username: String, password: String) {
+    fun login(passId: String, password: String) {
 
-        val result = loginRepository.login(username, password)
+        val result = loginRepository.login(passId, password)
 
-        if (result is Result.Success<*>) {
+        if (result is Result.Success) {
             _loginResult.value =
-                LoginResult(success = LoggedInUserView(passId = R.string.pass_id))
+                LoginResult(success = LoggedInUserView(passId = result.data.passId))
         } else {
             _loginResult.value = LoginResult(error = R.string.login_failed)
         }
     }
 
-    fun loginDataChanged(username: String, password: String) {
-        if (!isUserNameValid(username)) {
-            _loginForm.value = LoginFormState(usernameError = R.string.invalid_username)
+    fun loginDataChanged(passId: String, password: String) {
+        if (!isPassIdValid(passId)) {
+            _loginForm.value = LoginFormState(passIdError = R.string.invalid_username)
         } else if (!isPasswordValid(password)) {
             _loginForm.value = LoginFormState(passwordError = R.string.invalid_password)
         } else {
@@ -40,11 +40,11 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
     }
 
 
-    private fun isUserNameValid(username: String): Boolean {
-        return if (username.contains('@')) {
-            Patterns.EMAIL_ADDRESS.matcher(username).matches()
+    private fun isPassIdValid(passId: String): Boolean {
+        return if (passId.contains('@')) {
+            Patterns.EMAIL_ADDRESS.matcher(passId).matches()
         } else {
-            username.isNotBlank()
+            passId.isNotBlank()
         }
     }
 
