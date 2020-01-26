@@ -18,13 +18,13 @@
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         android:textStyle="normal|bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvCurrentStatus"
+        app:layout_constraintBottom_toTopOf="@+id/llCurrentStatus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/tvCurrentStatus"
+        android:id="@+id/llCurrentStatus"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="50dp"
@@ -62,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCurrentStatus">
+        app:layout_constraintTop_toBottomOf="@+id/llCurrentStatus">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etReason"
