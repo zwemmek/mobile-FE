@@ -4,8 +4,11 @@
     <string name="current_state">Current State</string>
     <string name="checked_in_out_ph">Checked in/out PH</string>
     <string name="checkbox_placeholder">Checkbox Placeholder</string>
-    <string name="reason_field_optional">Reason field (optional)</string>
-    <string name="check_me_in_out">Check me in/out</string>
+    <string name="reason_field_optional">Reason (optional)</string>
+    <string name="check_me_in">Check me in</string>
+    <string name="check_me_out">Check me out</string>
+    <string name="checked_in">You are checked in</string>
+    <string name="checked_out">You are checked out</string>
 
     <!--    used in: layout\activity_register.xml-->
     <string name="placeholder_image">Placeholder Image</string>
