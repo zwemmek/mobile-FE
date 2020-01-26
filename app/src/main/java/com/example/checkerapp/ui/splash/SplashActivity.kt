@@ -1,4 +1,4 @@
-package com.example.checkerapp.ui.main
+package com.example.checkerapp.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

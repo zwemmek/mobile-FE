@@ -24,6 +24,5 @@ interface EmployeeApiService {
 
     @POST("checker/services/rest/authentication")
     fun loginEmployee(@Body loggedInUser: LoggedInUser): Call <ServerResponse>
-    fun logout()
 
 }

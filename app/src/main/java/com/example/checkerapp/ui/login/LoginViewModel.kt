@@ -19,7 +19,7 @@ import com.example.checkerapp.repository.EmployeeApiRepository
 class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
     private val employeeApiRepository = EmployeeApiRepository()
-    val serverResponse = MutableLiveData<ServerResponse>()
+    val serverResponse = MutableLiveData<String>()
     val error = MutableLiveData<String>()
 
 //    private val _loginForm = MutableLiveData<LoginFormState>()
@@ -43,11 +43,9 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     fun login(loggedInUser: LoggedInUser) {
         employeeApiRepository.loginEmployee(loggedInUser).enqueue(object : Callback<ServerResponse> {
             override fun onResponse(call : Call<ServerResponse>, response: Response<ServerResponse>) {
-                if (response.isSuccessful) serverResponse.value = response.body()!!
+                if (response.isSuccessful) serverResponse.value = "Succesvol"
                 else {
-                    val serverResponse = Gson().fromJson(response.errorBody()!!.string()
-                        , ServerResponse::class.java)
-                    error.value = serverResponse.message
+                    error.value = "Geen geldige login"
                 }
             }
 
@@ -59,16 +57,16 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     }
 
 
-//    private fun isPassIdValid(passId: String): Boolean {
-//        return if (passId.contains('@')) {
-//            Patterns.EMAIL_ADDRESS.matcher(passId).matches()
-//        } else {
-//            passId.isNotBlank()
-//        }
-//    }
-//
-//
-//    private fun isPasswordValid(password: String): Boolean {
-//        return password.length > 5
-//    }
+    private fun isPassIdValid(passId: String): Boolean {
+        return if (passId.contains('@')) {
+            Patterns.EMAIL_ADDRESS.matcher(passId).matches()
+        } else {
+            passId.isNotBlank()
+        }
+    }
+
+
+    private fun isPasswordValid(password: String): Boolean {
+        return password.length > 5
+    }
 }
