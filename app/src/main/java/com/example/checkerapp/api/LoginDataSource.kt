@@ -9,7 +9,7 @@ class LoginDataSource {
 
     fun loginEmployee(passId: String, password: String): Result<LoggedInUser> {
         try {
-            val User = LoggedInUser("5012", "tester")
+            val User = LoggedInUser(passId, password)
             return Result.Success(User)
         } catch (e: Throwable) {
             return Result.Error(IOException("Error logging in", e))

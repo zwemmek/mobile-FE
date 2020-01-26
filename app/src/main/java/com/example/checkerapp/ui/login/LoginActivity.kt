@@ -99,7 +99,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
-        val displayName = model.passId
+        val passId = model.passId
         Toast.makeText(
             applicationContext,
             "$welcome $passId",
