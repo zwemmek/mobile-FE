@@ -1,6 +1,7 @@
 package com.example.checkerapp.api
 
 import com.example.checkerapp.model.Employee
+import com.example.checkerapp.model.LoggedInUser
 import com.example.checkerapp.model.ServerResponse
 import com.example.checkerapp.model.StatusChange
 import com.example.checkerapp.model.StatusHistory
@@ -25,4 +26,8 @@ interface EmployeeApiService {
     @PUT("/checker/services/rest/status/{employeeId}/change")
     fun changeStatus(@Path("employeeId") employeeId: Long,
                      @Body statusChange: StatusChange): Call<ServerResponse>
-    }
+
+    @POST("checker/services/rest/authentication")
+    fun loginEmployee(@Body loggedInUser: LoggedInUser): Call <ServerResponse>
+
+}
