@@ -21,4 +21,7 @@ interface EmployeeApiService {
     fun getStatusHistory(@Path("employeeId") employeeId: Long,
                          @Path("limit") limit: Int) : Call<List<StatusHistory>>
 
-}
+    @GET ("/checker/services/rest/status/{employeeId}")
+    fun getCurrentStatusByWorkerId(@Path("employeeId") employeeId: Long):Call<StatusHistory>
+
+    }
