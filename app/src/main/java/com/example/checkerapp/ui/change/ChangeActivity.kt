@@ -28,7 +28,7 @@ class ChangeActivity : AppCompatActivity() {
 
     private fun initViews() {
         //TODO - view state
-        btnChangeState.setOnClickListener{changeState(); GetWorker()}    //change the state
+        btnChangeState.setOnClickListener{ GetWorker()}    //change the state changeState();
     }
 
     private fun initViewModel() {

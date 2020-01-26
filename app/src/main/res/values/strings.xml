@@ -28,5 +28,6 @@
     <string name="current_status_button">Status</string>
     <string name="change_status_button">Change</string>
     <string name="status_history_button">History</string>
+    <string name="reason">Reason: %1$s</string>
 
 </resources>
