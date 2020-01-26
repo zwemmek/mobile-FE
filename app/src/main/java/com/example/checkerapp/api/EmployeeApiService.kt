@@ -1,6 +1,7 @@
 package com.example.checkerapp.api
 
 import com.example.checkerapp.model.Employee
+import com.example.checkerapp.model.LoggedInUser
 import com.example.checkerapp.model.ServerResponse
 import com.example.checkerapp.model.StatusHistory
 import retrofit2.Call
@@ -23,6 +24,8 @@ interface EmployeeApiService {
 
     @POST("checker/services/rest/authentication")
     fun loginEmployee(@Path("passID")passId: String,
-                      @Path("password")password: String)
+                      @Path("password")password: String) : Call <LoggedInUser>
+
+    fun logout()
 
 }

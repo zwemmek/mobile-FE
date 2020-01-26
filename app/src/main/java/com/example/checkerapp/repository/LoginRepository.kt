@@ -1,10 +1,12 @@
 package com.example.checkerapp.repository
 
+import com.example.checkerapp.api.EmployeeApiService
 import com.example.checkerapp.api.LoginDataSource
 import com.example.checkerapp.model.LoggedInUser
+import retrofit2.Call
 
 
-class LoginRepository(val dataSource: LoginDataSource) {
+class LoginRepository(val dataSource: EmployeeApiService) {
 
     var user: LoggedInUser? = null
         private set
@@ -21,12 +23,12 @@ class LoginRepository(val dataSource: LoginDataSource) {
         dataSource.logout()
     }
 
-    fun login(passId: String, password: String): Result<LoggedInUser> {
+    fun login(passId: String, password: String): Call<LoggedInUser> {
 
         val result = dataSource.loginEmployee(passId, password)
 
-        if (result is Result.Success) {
-            setLoggedInUser(result.data)
+        if (result is Result.Success<*>) {
+            setLoggedInUser(result.data as LoggedInUser)
         }
 
         return result

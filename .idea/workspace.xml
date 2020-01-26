@@ -7,7 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="970081a5-5908-4d42-b7c4-0552f0605d9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/model/LoggedInUser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/model/LoggedInUser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/api/EmployeeApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/api/EmployeeApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/LoginRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/LoginRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginViewModel.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/api/LoginDataSource.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="204">
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="39" />
               <folding>
                 <element signature="e#36#159#0" expanded="true" />
               </folding>
@@ -46,35 +52,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/model/LoggedInUser.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+            <state relative-caret-position="323">
+              <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
               <folding>
-                <element signature="e#1463#1488#0" expanded="true" />
+                <element signature="e#41#320#0" expanded="true" />
+                <element signature="e#910#926#0" expanded="true" />
+                <element signature="e#998#1019#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/Result.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="85">
+              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
             </state>
           </provider>
-          <provider editor-type-id="android-manifest" />
         </entry>
       </file>
     </leaf>
@@ -96,21 +93,21 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/main/SplashActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/api/EmployeeApiService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/model/Login.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginResult.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginFormState.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginViewModelFactory.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/Result.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/EmployeeApiRepository.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/LoginRepository.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoggedInUserView.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/api/LoginDataSource.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/model/LoggedInUser.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/api/EmployeeApiService.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/LoginRepository.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoggedInUserView.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginViewModel.kt" />
       </list>
     </option>
   </component>
@@ -160,6 +157,13 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="checkerapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CheckerApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="checkerapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -169,6 +173,14 @@
               <item name="checkerapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="history" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CheckerApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="checkerapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CheckerApp" type="1abcf292:AndroidViewProjectNode" />
@@ -402,13 +414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-extensions/2.1.0/84e54bd949cf1843ddddfe3e005b4d3a1649d562/lifecycle-extensions-2.1.0-sources.jar!/androidx/lifecycle/ViewModelProviders.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -441,13 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/Result.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -501,27 +499,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/api/EmployeeApiService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#36#310#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/EmployeeApiRepository.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="104" selection-start-line="12" selection-start-column="104" selection-end-line="12" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoggedInUserView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -566,23 +547,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/LoginRepository.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/history/HistoryActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <element signature="e#43#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#41#320#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -605,27 +573,70 @@
       </provider>
       <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/history/HistoryActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/model/LoggedInUser.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/LoginRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#43#216#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/api/LoginDataSource.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="204">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="39" />
           <folding>
             <element signature="e#36#159#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/model/LoggedInUser.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/api/EmployeeApiService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="323">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/repository/Result.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoggedInUserView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/checkerapp/ui/login/LoginViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+          <folding>
+            <element signature="e#41#320#0" expanded="true" />
+            <element signature="e#910#926#0" expanded="true" />
+            <element signature="e#998#1019#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
