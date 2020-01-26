@@ -16,6 +16,7 @@ class ChangeActivityViewModel(application: Application) : AndroidViewModel(appli
 
     private val employeeApiRepository = EmployeeApiRepository()
     val employee = MutableLiveData<StatusHistory>()
+    val serverResponse = MutableLiveData<ServerResponse>()
     val error = MutableLiveData<String>()
 
     fun getCurrentStatusByWorkerId(employeeId: Long) {
@@ -35,6 +36,24 @@ class ChangeActivityViewModel(application: Application) : AndroidViewModel(appli
 
         })
         }
+
+    fun changeStatus(employeeId: Long) {
+        employeeApiRepository.changeStatus(employeeId).enqueue(object : Callback<ServerResponse> {
+            override fun onResponse(call : Call<ServerResponse>, response: Response<ServerResponse>) {
+                if (response.isSuccessful) serverResponse.value = response.body()!!
+                else {
+                    val serverResponse = Gson().fromJson(response.errorBody()!!.string()
+                        , ServerResponse::class.java)
+                    error.value = serverResponse.message
+                }
+            }
+
+            override fun onFailure(call: Call<ServerResponse>, t: Throwable) {
+                error.value = t.message
+            }
+
+        })
+    }
 }
 
 

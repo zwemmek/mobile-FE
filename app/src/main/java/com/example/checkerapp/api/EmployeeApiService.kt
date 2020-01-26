@@ -4,10 +4,7 @@ import com.example.checkerapp.model.Employee
 import com.example.checkerapp.model.ServerResponse
 import com.example.checkerapp.model.StatusHistory
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface EmployeeApiService {
 
@@ -24,4 +21,6 @@ interface EmployeeApiService {
     @GET ("/checker/services/rest/status/{employeeId}")
     fun getCurrentStatusByWorkerId(@Path("employeeId") employeeId: Long):Call<StatusHistory>
 
+    @PUT("/checker/services/rest/status/{employeeId}/change")
+    fun changeStatus(@Path("employeeId") employeeId: Long): Call<ServerResponse>
     }
