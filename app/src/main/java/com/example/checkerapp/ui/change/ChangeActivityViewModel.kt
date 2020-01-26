@@ -3,8 +3,8 @@ package com.example.checkerapp.ui.change
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.example.checkerapp.model.Employee
 import com.example.checkerapp.model.ServerResponse
+import com.example.checkerapp.model.StatusChange
 import com.example.checkerapp.model.StatusHistory
 import com.example.checkerapp.repository.EmployeeApiRepository
 import com.google.gson.Gson
@@ -15,14 +15,16 @@ import retrofit2.Response
 class ChangeActivityViewModel(application: Application) : AndroidViewModel(application) {
 
     private val employeeApiRepository = EmployeeApiRepository()
-    val employee = MutableLiveData<StatusHistory>()
+    val statusHistory = MutableLiveData<StatusHistory>()
     val serverResponse = MutableLiveData<ServerResponse>()
     val error = MutableLiveData<String>()
+    var responseSuccess = false
 
-    fun getCurrentStatusByWorkerId(employeeId: Long) {
-        employeeApiRepository.getCurrentStatusByWorkerId(employeeId).enqueue(object : Callback<StatusHistory> {
+    fun getCurrentStatusByEmployeeId(employeeId: Long) {
+        employeeApiRepository.getCurrentStatusByEmployeeId(employeeId).enqueue(object : Callback<StatusHistory> {
             override fun onResponse(call : Call<StatusHistory>, response: Response<StatusHistory>) {
-                if (response.isSuccessful) employee.value = response.body()!!
+                if (response.isSuccessful) responseSuccess = true
+                if (response.isSuccessful) statusHistory.value = response.body()!!
                 else {
                     val serverResponse = Gson().fromJson(response.errorBody()!!.string()
                         , ServerResponse::class.java)
@@ -37,8 +39,8 @@ class ChangeActivityViewModel(application: Application) : AndroidViewModel(appli
         })
         }
 
-    fun changeStatus(employeeId: Long) {
-        employeeApiRepository.changeStatus(employeeId).enqueue(object : Callback<ServerResponse> {
+    fun changeStatus(employeeId: Long, statusChange: StatusChange) {
+        employeeApiRepository.changeStatus(employeeId,statusChange).enqueue(object : Callback<ServerResponse> {
             override fun onResponse(call : Call<ServerResponse>, response: Response<ServerResponse>) {
                 if (response.isSuccessful) serverResponse.value = response.body()!!
                 else {

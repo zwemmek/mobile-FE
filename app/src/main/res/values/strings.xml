@@ -7,8 +7,7 @@
     <string name="reason_field_optional">Reason (optional)</string>
     <string name="check_me_in">Check me in</string>
     <string name="check_me_out">Check me out</string>
-    <string name="checked_in">You are checked in</string>
-    <string name="checked_out">You are checked out</string>
+    <string name="checked_status">You are checked: %1$s</string>
 
     <!--    used in: layout\activity_register.xml-->
     <string name="placeholder_image">Placeholder Image</string>

@@ -2,6 +2,7 @@ package com.example.checkerapp.api
 
 import com.example.checkerapp.model.Employee
 import com.example.checkerapp.model.ServerResponse
+import com.example.checkerapp.model.StatusChange
 import com.example.checkerapp.model.StatusHistory
 import retrofit2.Call
 import retrofit2.http.*
@@ -19,8 +20,9 @@ interface EmployeeApiService {
                          @Path("limit") limit: Int) : Call<List<StatusHistory>>
 
     @GET ("/checker/services/rest/status/{employeeId}")
-    fun getCurrentStatusByWorkerId(@Path("employeeId") employeeId: Long):Call<StatusHistory>
+    fun getCurrentStatusByEmployeeId(@Path("employeeId") employeeId: Long):Call<StatusHistory>
 
     @PUT("/checker/services/rest/status/{employeeId}/change")
-    fun changeStatus(@Path("employeeId") employeeId: Long): Call<ServerResponse>
+    fun changeStatus(@Path("employeeId") employeeId: Long,
+                     @Body statusChange: StatusChange): Call<ServerResponse>
     }
