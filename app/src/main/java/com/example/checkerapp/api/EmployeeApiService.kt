@@ -21,4 +21,8 @@ interface EmployeeApiService {
     fun getStatusHistory(@Path("employeeId") employeeId: Long,
                          @Path("limit") limit: Int) : Call<List<StatusHistory>>
 
+    @POST("checker/services/rest/authentication")
+    fun loginEmployee(@Path("passID")passId: String,
+                      @Path("password")password: String)
+
 }

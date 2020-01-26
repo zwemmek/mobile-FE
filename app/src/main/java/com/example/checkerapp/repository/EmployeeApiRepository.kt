@@ -11,6 +11,4 @@ class EmployeeApiRepository {
     fun getEmployeeByPassId(passId: Long) = employeeApi.getEmployeeByPassId(passId)
     fun registerEmployee(employee: Employee) = employeeApi.registerEmployee(employee)
     fun getStatusHistory(employeeId: Long, limit: Int) = employeeApi.getStatusHistory(employeeId, limit)
-
-
 }
