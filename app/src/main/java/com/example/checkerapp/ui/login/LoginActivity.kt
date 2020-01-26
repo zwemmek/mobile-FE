@@ -16,6 +16,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 
 import com.example.checkerapp.R
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_login)
 
-        val username = findViewById<EditText>(R.id.username)
+        val username = findViewById<EditText>(R.id.passId)
         val password = findViewById<EditText>(R.id.password)
         val login = findViewById<Button>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
@@ -98,10 +99,10 @@ class LoginActivity : AppCompatActivity() {
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
-        val displayName = model.displayName
+        val displayName = model.passId
         Toast.makeText(
             applicationContext,
-            "$welcome $displayName",
+            "$welcome $passId",
             Toast.LENGTH_LONG
         ).show()
     }
