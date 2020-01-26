@@ -19,16 +19,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.register.RegisterActivity">
+        </activity>
+        <activity android:name=".ui.main.MainActivity">
+            </activity>
+        <activity android:name=".ui.change.ChangeActivity">
+
+        </activity>
         <activity android:name=".ui.login.LoginActivity">
 
         </activity>
         <activity android:name=".ui.history.HistoryActivity">
 
         </activity>
-        <activity android:name=".ui.register.RegisterActivity">
-        </activity>
-        <activity android:name=".ui.main.MainActivity">
-            </activity>
     </application>
 
 </manifest>
