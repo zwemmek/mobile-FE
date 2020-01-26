@@ -23,9 +23,7 @@ interface EmployeeApiService {
                          @Path("limit") limit: Int) : Call<List<StatusHistory>>
 
     @POST("checker/services/rest/authentication")
-    fun loginEmployee(@Path("passID")passId: String,
-                      @Path("password")password: String) : Call <LoggedInUser>
-
+    fun loginEmployee(@Body loggedInUser: LoggedInUser): Call <ServerResponse>
     fun logout()
 
 }

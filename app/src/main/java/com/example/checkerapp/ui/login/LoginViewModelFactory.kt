@@ -2,8 +2,6 @@ package com.example.checkerapp.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.checkerapp.api.LoginDataSource
-import com.example.checkerapp.repository.LoginRepository
 
 class LoginViewModelFactory : ViewModelProvider.Factory {
 
