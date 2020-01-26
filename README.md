@@ -18,6 +18,4 @@ optie 1:
 
 
 optie 2:
-  gooi je gehele lokale project weg (ook van je schijf) en download hem opnieuw van git.
-
-
+	gooi je gehele lokale project weg (ook van je schijf) en download hem opnieuw van git.
