@@ -11,9 +11,6 @@ data class StatusHistory(
     val lastCheckedInDate: String,
 
     @SerializedName("lastCheckOutDate")
-    val lastCheckedOutDate: String,
-
-    @SerializedName("reason")
-    val reason: String
+    val lastCheckedOutDate: String
 
 )
