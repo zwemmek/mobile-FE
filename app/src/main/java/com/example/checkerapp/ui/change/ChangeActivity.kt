@@ -52,6 +52,8 @@ class ChangeActivity : AppCompatActivity() {
                 btnChangeState.setBackgroundColor(getResources().getColor(R.color.colorAccent))
                 btnChangeState.text = getString(R.string.check_me_out)
                 etReason.isEnabled = true
+                etReason.hint = getString(R.string.reason_field_optional)
+                tilReason.background = getDrawable(R.drawable.edit_text_background)
                 // and more color changes
             }
             "out" -> {
@@ -60,6 +62,8 @@ class ChangeActivity : AppCompatActivity() {
                 btnChangeState.setBackgroundColor(getResources().getColor(R.color.grayed_out))
                 btnChangeState.text = getString(R.string.check_me_in)
                 etReason.isEnabled = false
+                etReason.hint = getString(R.string.reason_field_to_check_in)
+                tilReason.background = getDrawable(R.drawable.edit_text_background_greyed)
                 // change colors to red-ish
             }
             else -> Toast.makeText(applicationContext,"Something went wrong",Toast.LENGTH_SHORT).show()

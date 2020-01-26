@@ -5,6 +5,7 @@
     <string name="checked_in_out_ph">Checked in/out PH</string>
     <string name="checkbox_placeholder">Checkbox Placeholder</string>
     <string name="reason_field_optional">type reason here (optional)</string>
+    <string name="reason_field_to_check_in">you need to  check in at the location. \n you can\'t check in via the app.</string>
     <string name="check_me_in">Check me in</string>
     <string name="check_me_out">Check me out</string>
     <string name="checked_status">You are checked: %1$s</string>
