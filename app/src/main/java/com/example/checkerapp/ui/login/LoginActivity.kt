@@ -44,10 +44,10 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.login(user)
 
 
-        if(user != null){
-            loginViewModel.serverResponse.observe(this, Observer {
-                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
-            })
+        if(loginViewModel.serverResponse.equals(true)){
+//            loginViewModel.serverResponse.observe(this, Observer {
+//                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+//            })
 
             startActivity(
                 Intent(this@LoginActivity,

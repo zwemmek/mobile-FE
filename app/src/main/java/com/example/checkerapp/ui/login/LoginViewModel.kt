@@ -22,24 +22,6 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     val serverResponse = MutableLiveData<String>()
     val error = MutableLiveData<String>()
 
-//    private val _loginForm = MutableLiveData<LoginFormState>()
-//    val loginFormState: LiveData<LoginFormState> = _loginForm
-//
-//    private val _loginResult = MutableLiveData<LoginResult>()
-//    val loginResult: LiveData<LoginResult> = _loginResult
-
-
-
-//    fun loginDataChanged(passId: String, password: String) {
-//        if (!isPassIdValid(passId)) {
-//            _loginForm.value = LoginFormState(passIdError = R.string.invalid_username)
-//        } else if (!isPasswordValid(password)) {
-//            _loginForm.value = LoginFormState(passwordError = R.string.invalid_password)
-//        } else {
-//            _loginForm.value = LoginFormState(isDataValid = true)
-//        }
-//    }
-
     fun login(loggedInUser: LoggedInUser) {
         employeeApiRepository.loginEmployee(loggedInUser).enqueue(object : Callback<ServerResponse> {
             override fun onResponse(call : Call<ServerResponse>, response: Response<ServerResponse>) {
@@ -54,19 +36,5 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
             }
 
         })
-    }
-
-
-    private fun isPassIdValid(passId: String): Boolean {
-        return if (passId.contains('@')) {
-            Patterns.EMAIL_ADDRESS.matcher(passId).matches()
-        } else {
-            passId.isNotBlank()
-        }
-    }
-
-
-    private fun isPasswordValid(password: String): Boolean {
-        return password.length > 5
     }
 }
