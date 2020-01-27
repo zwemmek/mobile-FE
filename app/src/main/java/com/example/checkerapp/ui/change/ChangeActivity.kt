@@ -28,7 +28,6 @@ class ChangeActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        //TODO - view state
         navigate()
         btnChangeState.setOnClickListener{changeState()}
     }
@@ -54,8 +53,8 @@ class ChangeActivity : AppCompatActivity() {
         when (statusHistory) {
             "in" -> {
                 ivStatusPlaceHolder.setBackgroundResource(R.drawable.vinkje)
-                clChangeStatus.setBackgroundColor(getResources().getColor(R.color.checked_in))
-                btnChangeState.setBackgroundColor(getResources().getColor(R.color.colorAccent))
+                clChangeStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.checked_in))
+                btnChangeState.setBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent))
                 btnChangeState.text = getString(R.string.check_me_out)
                 etReason.isEnabled = true
                 etReason.hint = getString(R.string.reason_field_optional)
@@ -64,8 +63,8 @@ class ChangeActivity : AppCompatActivity() {
             }
             "out" -> {
                 ivStatusPlaceHolder.setBackgroundResource(R.drawable.kruis)
-                clChangeStatus.setBackgroundColor(getResources().getColor(R.color.checked_out))
-                btnChangeState.setBackgroundColor(getResources().getColor(R.color.grayed_out))
+                clChangeStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.checked_out))
+                btnChangeState.setBackgroundColor(ContextCompat.getColor(this, R.color.grayed_out))
                 btnChangeState.text = getString(R.string.check_me_in)
                 etReason.isEnabled = false
                 etReason.hint = getString(R.string.reason_field_to_check_in)

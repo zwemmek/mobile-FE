@@ -10,9 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.checkerapp.R
 import com.example.checkerapp.ui.change.ChangeActivity
-import com.example.checkerapp.ui.change.ChangeActivityViewModel
 import com.example.checkerapp.ui.history.HistoryActivity
-import kotlinx.android.synthetic.main.activity_change_status.*
 import kotlinx.android.synthetic.main.activity_current.*
 import kotlinx.android.synthetic.main.navigation_bar.*
 
@@ -80,12 +78,12 @@ class CurrentActivity : AppCompatActivity() {
         when (statusHistory) {
             "in" -> {
                 ivActualStatusPlaceHolder.setBackgroundResource(R.drawable.vinkje)
-                clActualStatus.setBackgroundColor(getResources().getColor(R.color.checked_in))
+                clActualStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.checked_in))
                 // and more color changes
             }
             "out" -> {
                 ivActualStatusPlaceHolder.setBackgroundResource(R.drawable.kruis)
-                clActualStatus.setBackgroundColor(getResources().getColor(R.color.checked_out))
+                clActualStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.checked_out))
                 // change colors to red-ish
             }
             else -> Toast.makeText(applicationContext,"Something went wrong \n guess you entered limbo...",
