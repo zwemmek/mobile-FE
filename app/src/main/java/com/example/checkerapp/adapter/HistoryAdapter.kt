@@ -36,15 +36,18 @@ class HistoryAdapter(private val statuses: List<StatusHistory>)
             itemView.tvStatus.text =  context.getString(R.string.status, history.status)
             itemView.tvLastCheckedInDate.text = context.getString(R.string.last_checked_in_date,
                 history.lastCheckedInDate)
-            if(history.lastCheckedOutDate != null)
-                //TODO deze statement oplossen.
-            itemView.tvLastCheckedOutDate.text = context.getString(R.string.last_checked_out_date,
-                history.lastCheckedOutDate)
-            else {
+            if(history.lastCheckedOutDate.isNullOrBlank())
                 itemView.tvLastCheckedOutDate.text = context.getString(R.string.last_checked_out_date,
                     "")
+            else {
+                itemView.tvLastCheckedOutDate.text = context.getString(R.string.last_checked_out_date,
+                    history.lastCheckedOutDate)
             }
-            itemView.tvReason.text = context.getString(R.string.reason, history.reason)
+            if (history.reason.isNullOrBlank())
+                itemView.tvReason.text = context.getString(R.string.reason, "")
+            else {
+                itemView.tvReason.text = context.getString(R.string.reason, history.reason)
+            }
         }
     }
 }

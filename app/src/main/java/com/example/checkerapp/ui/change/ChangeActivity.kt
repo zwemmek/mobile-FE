@@ -56,7 +56,6 @@ class ChangeActivity : AppCompatActivity() {
                 clChangeStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.checked_in))
                 btnChangeState.setBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent))
                 btnChangeState.text = getString(R.string.check_me_out)
-                etReason.isEnabled = true
                 etReason.hint = getString(R.string.reason_field_optional)
                 tilReason.background = getDrawable(R.drawable.edit_text_background)
                 // and more color changes
@@ -66,6 +65,7 @@ class ChangeActivity : AppCompatActivity() {
                 clChangeStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.checked_out))
                 btnChangeState.setBackgroundColor(ContextCompat.getColor(this, R.color.grayed_out))
                 btnChangeState.text = getString(R.string.check_me_in)
+                btnChangeState.isEnabled = false
                 etReason.isEnabled = false
                 etReason.hint = getString(R.string.reason_field_to_check_in)
                 tilReason.background = getDrawable(R.drawable.edit_text_background_greyed)
