@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.checkerapp.R
@@ -50,6 +52,8 @@ class CurrentActivity : AppCompatActivity() {
         btnChangeStatus.setOnClickListener { openChangeStatus() }
         btnCurrentStatus.setOnClickListener { openCurrentStatus() }
         btnHistory.setOnClickListener { openHistory() }
+        ViewCompat.setBackgroundTintList(btnCurrentStatus, ContextCompat.getColorStateList(this, R.color.grayed_out_button))
+        btnCurrentStatus.setTextColor(ContextCompat.getColorStateList(this, R.color.grayed_out_button_text))
     }
 
     private fun openHistory() {

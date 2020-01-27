@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -60,6 +62,8 @@ class HistoryActivity : AppCompatActivity() {
         btnChangeStatus.setOnClickListener { openChangeStatus() }
         btnCurrentStatus.setOnClickListener { openCurrentStatus() }
         btnHistory.setOnClickListener { openHistory() }
+        ViewCompat.setBackgroundTintList(btnHistory, ContextCompat.getColorStateList(this, R.color.grayed_out_button))
+        btnHistory.setTextColor(ContextCompat.getColorStateList(this, R.color.grayed_out_button_text))
     }
 
     private fun openHistory() {
