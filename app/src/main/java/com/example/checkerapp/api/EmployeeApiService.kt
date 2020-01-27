@@ -28,6 +28,6 @@ interface EmployeeApiService {
                      @Body statusChange: StatusChange): Call<ServerResponse>
 
     @POST("checker/services/rest/authentication")
-    fun loginEmployee(@Body loggedInUser: LoggedInUser): Call <ServerResponse>
+    fun loginEmployee(@Body loggedInUser: LoggedInUser): Call <Void>
 
 }

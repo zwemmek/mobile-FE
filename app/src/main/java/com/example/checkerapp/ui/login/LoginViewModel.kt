@@ -23,15 +23,15 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     val error = MutableLiveData<String>()
 
     fun login(loggedInUser: LoggedInUser) {
-        employeeApiRepository.loginEmployee(loggedInUser).enqueue(object : Callback<ServerResponse> {
-            override fun onResponse(call : Call<ServerResponse>, response: Response<ServerResponse>) {
-                if (response.isSuccessful) serverResponse.value = "Succesvol"
+        employeeApiRepository.loginEmployee(loggedInUser).enqueue(object : Callback<Void> {
+            override fun onResponse(call : Call<Void>, response: Response<Void>) {
+                if (response.isSuccessful) serverResponse.value = "200"
                 else {
                     error.value = "Geen geldige login"
                 }
             }
 
-            override fun onFailure(call: Call<ServerResponse>, t: Throwable) {
+            override fun onFailure(call: Call<Void>, t: Throwable) {
                 error.value = t.message
             }
 

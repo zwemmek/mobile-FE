@@ -44,7 +44,8 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.login(user)
 
 
-        if (loginViewModel.serverResponse.equals(true)) {
+            if (loginViewModel.serverResponse.value == "200"){
+
             loginViewModel.serverResponse.observe(this, Observer {
                 Toast.makeText(this, it, Toast.LENGTH_LONG).show()
             })
@@ -54,11 +55,11 @@ class LoginActivity : AppCompatActivity() {
                         CurrentActivity::class.java
                     )
                 )
-            }else{
-
-            loginViewModel.error.observe(this, Observer {
-                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
-            })
+//            }else{
+//
+//            loginViewModel.error.observe(this, Observer {
+//                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+//            })
         }
 
 
