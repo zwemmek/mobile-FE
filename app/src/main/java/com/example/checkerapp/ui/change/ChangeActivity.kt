@@ -1,5 +1,6 @@
 package com.example.checkerapp.ui.change
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +8,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.checkerapp.R
 import com.example.checkerapp.model.StatusChange
+import com.example.checkerapp.ui.current.CurrentActivity
+import com.example.checkerapp.ui.history.HistoryActivity
 import kotlinx.android.synthetic.main.activity_change_status.*
+import kotlinx.android.synthetic.main.navigation_bar.*
 
 class ChangeActivity : AppCompatActivity() {
     
@@ -23,6 +27,7 @@ class ChangeActivity : AppCompatActivity() {
 
     private fun initViews() {
         //TODO - view state
+        navigate()
         btnChangeState.setOnClickListener{changeState()}
     }
 
@@ -31,7 +36,7 @@ class ChangeActivity : AppCompatActivity() {
         changeActivityViewModel.getCurrentStatusByEmployeeId(66366)
         changeActivityViewModel.statusHistory.observe(this, Observer { statusHistory ->
             if (statusHistory != null) {
-                getWorker(statusHistory.status)
+                getEmployee(statusHistory.status)
                 tvCurrentStatusText.text = getString(R.string.checked_status, statusHistory.status)
             }
         })
@@ -42,7 +47,7 @@ class ChangeActivity : AppCompatActivity() {
 
     }
 
-    private fun getWorker(statusHistory: String) {
+    private fun getEmployee(statusHistory: String) {
 
         when (statusHistory) {
             "in" -> {
@@ -91,4 +96,29 @@ class ChangeActivity : AppCompatActivity() {
             })
         }
     }
+
+    private fun navigate(){
+        btnChangeStatus.setOnClickListener { openChangeStatus() }
+        btnCurrentStatus.setOnClickListener { openCurrentStatus() }
+        btnHistory.setOnClickListener { openHistory() }
+    }
+
+    private fun openHistory() {
+        btnHistory.setOnClickListener {startActivity(
+            Intent(this@ChangeActivity,
+                HistoryActivity::class.java)
+        )}
+    }
+
+    private fun openCurrentStatus() {
+        btnCurrentStatus.setOnClickListener {startActivity(
+            Intent(this@ChangeActivity,
+                CurrentActivity::class.java)
+        )}}
+
+    private fun openChangeStatus() {
+        btnChangeStatus.setOnClickListener {startActivity(
+            Intent(this@ChangeActivity,
+                ChangeActivity::class.java)
+        )} }
 }

@@ -37,7 +37,7 @@ class ChangeActivityViewModel(application: Application) : AndroidViewModel(appli
             }
 
         })
-        }
+    }
 
     fun changeStatus(employeeId: Long, statusChange: StatusChange) {
         employeeApiRepository.changeStatus(employeeId,statusChange).enqueue(object : Callback<ServerResponse> {
