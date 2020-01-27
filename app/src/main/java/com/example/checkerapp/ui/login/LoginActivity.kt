@@ -44,26 +44,26 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.login(user)
 
 
-        if(loginViewModel.serverResponse.equals(true)){
-//            loginViewModel.serverResponse.observe(this, Observer {
-//                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
-//            })
-
-            startActivity(
-                Intent(this@LoginActivity,
-                    CurrentActivity::class.java)
-            )
-
-        }else{
+        if (loginViewModel.serverResponse.equals(true)) {
+            loginViewModel.serverResponse.observe(this, Observer {
+                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+            })
+                startActivity(
+                    Intent(
+                        this@LoginActivity,
+                        CurrentActivity::class.java
+                    )
+                )
+            }else{
 
             loginViewModel.error.observe(this, Observer {
                 Toast.makeText(this, it, Toast.LENGTH_LONG).show()
             })
         }
 
-        }
 
 
+    }
 
     }
 
