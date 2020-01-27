@@ -40,7 +40,8 @@ class RegisterActivity : AppCompatActivity() {
 
                 if (registerViewModel.authResponse) {
                     Toast.makeText(this, "it worked", Toast.LENGTH_SHORT).show()
-                    //TODO link direct door naar login pagina
+                    //TODO deze toast omzetten naar de response van de server.
+                    // zorgen voor een link direct door naar login pagina
                 }
                 else {
                     registerViewModel.error.observe(this, Observer {

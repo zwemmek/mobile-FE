@@ -66,7 +66,7 @@ class ChangeActivity : AppCompatActivity() {
                 tilReason.background = getDrawable(R.drawable.edit_text_background_greyed)
                 // change colors to red-ish
             }
-            else -> Toast.makeText(applicationContext,"Something went wrong",Toast.LENGTH_SHORT).show()
+            else -> Toast.makeText(applicationContext,"Something went wrong \n guess you entered limbo...",Toast.LENGTH_SHORT).show()
         }
 
     }
@@ -82,7 +82,8 @@ class ChangeActivity : AppCompatActivity() {
         startActivity(getIntent())
 
         if (changeActivityViewModel.responseSuccess) {
-            Toast.makeText(this, "it worked", Toast.LENGTH_SHORT).show() //TODO hier wil ik eigenlijk de response body hebben.
+            Toast.makeText(this, "it worked", Toast.LENGTH_SHORT).show()
+            //TODO deze toast omzetten naar de response van de server.
 
         }
         else {
