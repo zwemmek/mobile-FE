@@ -26,8 +26,17 @@ class RegisterActivity : AppCompatActivity() {
         btnConfirm.setOnClickListener{register()}
     }
 
+    private fun checkForm(): Boolean {
+        return !(etEmployeeID.text.isNullOrBlank() ||
+                etFirstName.text.isNullOrBlank() ||
+                etLastName.text.isNullOrBlank() ||
+                etPassID.text.isNullOrBlank()   ||
+                etPassword.text.isNullOrBlank() ||
+                etRepeatPassword.text.isNullOrBlank())
+    }
+
     private fun register() {
-        if(etPassword.text.toString() == etRepeatPassword.text.toString()) {
+        if (checkForm()) {
 
             val newEmployee = Employee(
                 employeeId = etEmployeeID.text.toString(),
@@ -44,10 +53,10 @@ class RegisterActivity : AppCompatActivity() {
                     Toast.makeText(this, "it worked", Toast.LENGTH_SHORT).show()
                     //TODO deze toast omzetten naar de response van de server.
 
-                    btnConfirm.setOnClickListener {startActivity(
+                    startActivity(
                         Intent(this@RegisterActivity,
                             LoginActivity::class.java)
-                    )}
+                    )
                 }
                 else {
                     registerViewModel.error.observe(this, Observer {
@@ -56,7 +65,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
         }
         else {
-            Toast.makeText(this, "Sorry, password didn't match", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_LONG).show()
         }
     }
 }

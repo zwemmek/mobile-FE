@@ -67,21 +67,29 @@ class HistoryActivity : AppCompatActivity() {
     }
 
     private fun openHistory() {
-        btnHistory.setOnClickListener {startActivity(
-            Intent(this@HistoryActivity,
-                HistoryActivity::class.java)
-        )}
+        startActivity(
+            Intent(
+                this@HistoryActivity,
+                HistoryActivity::class.java
+            )
+        )
     }
 
     private fun openCurrentStatus() {
-        btnCurrentStatus.setOnClickListener {startActivity(
-            Intent(this@HistoryActivity,
-                CurrentActivity::class.java)
-        )}}
+        startActivity(
+            Intent(
+                this@HistoryActivity,
+                CurrentActivity::class.java
+            )
+        )
+    }
 
     private fun openChangeStatus() {
-        btnChangeStatus.setOnClickListener {startActivity(
-            Intent(this@HistoryActivity,
-                ChangeActivity::class.java)
-        )} }
+        startActivity(
+            Intent(
+                this@HistoryActivity,
+                ChangeActivity::class.java
+            )
+        )
+    }
 }

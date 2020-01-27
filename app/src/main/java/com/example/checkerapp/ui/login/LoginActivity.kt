@@ -49,10 +49,10 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, it, Toast.LENGTH_LONG).show()
             })
 
-            btnLogin.setOnClickListener {startActivity(
+            startActivity(
                 Intent(this@LoginActivity,
                     CurrentActivity::class.java)
-            )}
+            )
 
         }else{
 

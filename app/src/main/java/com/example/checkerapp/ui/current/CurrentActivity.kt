@@ -55,23 +55,31 @@ class CurrentActivity : AppCompatActivity() {
     }
 
     private fun openHistory() {
-        btnHistory.setOnClickListener {startActivity(
-            Intent(this@CurrentActivity,
-                HistoryActivity::class.java)
-        )}
+        startActivity(
+            Intent(
+                this@CurrentActivity,
+                HistoryActivity::class.java
+            )
+        )
     }
 
     private fun openCurrentStatus() {
-        btnCurrentStatus.setOnClickListener {startActivity(
-            Intent(this@CurrentActivity,
-                CurrentActivity::class.java)
-        )}}
+        startActivity(
+            Intent(
+                this@CurrentActivity,
+                CurrentActivity::class.java
+            )
+        )
+    }
 
     private fun openChangeStatus() {
-        btnChangeStatus.setOnClickListener {startActivity(
-            Intent(this@CurrentActivity,
-                ChangeActivity::class.java)
-        )} }
+        startActivity(
+            Intent(
+                this@CurrentActivity,
+                ChangeActivity::class.java
+            )
+        )
+    }
 
     private fun getEmployee(statusHistory: String) {
 
