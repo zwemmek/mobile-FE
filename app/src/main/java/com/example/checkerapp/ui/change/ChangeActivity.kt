@@ -10,8 +10,7 @@ import com.example.checkerapp.model.StatusChange
 import kotlinx.android.synthetic.main.activity_change_status.*
 
 class ChangeActivity : AppCompatActivity() {
-
-
+    
     private lateinit var changeActivityViewModel: ChangeActivityViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
