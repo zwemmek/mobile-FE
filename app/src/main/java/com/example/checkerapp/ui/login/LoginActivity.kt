@@ -1,5 +1,6 @@
 package com.example.checkerapp.ui.login
 
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -9,6 +10,8 @@ import android.widget.Toast
 
 import com.example.checkerapp.R
 import com.example.checkerapp.model.LoggedInUser
+import com.example.checkerapp.ui.current.CurrentActivity
+import com.example.checkerapp.ui.register.RegisterActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -24,7 +27,12 @@ class LoginActivity : AppCompatActivity() {
 
     private fun initViews() {
         btnLogin.setOnClickListener{loginEmployee()}
+        btnGeenAccount.setOnClickListener {startActivity(
+            Intent(this@LoginActivity,
+                RegisterActivity::class.java)
+        )}
     }
+
 
     private fun loginEmployee() {
         val user = LoggedInUser(
@@ -36,16 +44,22 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.login(user)
 
 
-
+        if(user != null){
             loginViewModel.serverResponse.observe(this, Observer {
                 Toast.makeText(this, it, Toast.LENGTH_LONG).show()
             })
 
+            btnLogin.setOnClickListener {startActivity(
+                Intent(this@LoginActivity,
+                    CurrentActivity::class.java)
+            )}
 
-        loginViewModel.error.observe(this, Observer {
-            Toast.makeText(this, it, Toast.LENGTH_LONG).show()
-        })
+        }else{
 
+            loginViewModel.error.observe(this, Observer {
+                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+            })
+        }
 
         }
 
