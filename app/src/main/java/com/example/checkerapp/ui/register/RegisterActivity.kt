@@ -24,10 +24,6 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun initViews() {
         btnConfirm.setOnClickListener{register()}
-        btnConfirm.setOnClickListener {startActivity(
-            Intent(this@RegisterActivity,
-                LoginActivity::class.java)
-        )}
     }
 
     private fun register() {
